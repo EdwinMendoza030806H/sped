@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeedCom - High-Speed Internet</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #002366, #001a4d);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            max-height: 250px;
+            border-radius: 100px; 
+        }
+
+        button {
+            background-color: #002366;
+            border: none;
+            color: white;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #001a4d;
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        #info-display {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e8f4ff;
+            border-radius: 8px;
+            font-size: 18px;
+            color: #333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .features {
+            padding: 50px 20px;
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            width: 220px;
+            text-align: center;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            font-size: 20px;
+            color: #002366;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .card p {
+            color: #555;
+            font-size: 15px;
+        }
+
+        
+        .testimonials {
+            background: #f4f4f4;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .testimonial {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px auto;
+            max-width: 500px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-style: italic;
+        }
+
+        footer {
+            background-color: #002366;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        .carousel {
+            position: relative;
+            max-width: 600px;
+            margin: 20px auto;
+            overflow: hidden;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .carousel-container {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+            background-color: white;
+            text-align: center;
+        }
+
+        #prev,
+        #next {
+            position: absolute;
+            top: 50%; 
+            transform: translateY(-50%); 
+            background-color: rgba(0, 51, 102, 0.7);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px; 
+            height: 40px; 
+            font-size: 20px; 
+            cursor: pointer;
+            z-index: 10; 
+        }
+
+        #prev {
+            left: 10px;
+        }
+
+        #next {
+            right: 10px; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="hero">
+            <img src="images/logo.jpg" alt="Logotipo de SpeedCom" class="logo">
+            <h1>Bienvenido a SpeedCom</h1>
+            <p>Tu solución de Internet de alta velocidad</p>
+            <button id="show-mission">MISION</button>
+            <button id="show-vision">VISION</button>
+            <button id="show-values">VALORES</button>
+            <div id="info-display"></div>
+        </div>
+    </header>
+
+    <section class="features">
+        <h2>¿Por qué elegir SpeedCom?</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Velocidades ultrarrápidas</h3>
+                <p>Conexión rápida y confiable.</p>
+            </div>
+            <div class="card">
+                <h3>Planes ilimitados</h3>
+                <p>Datos sin límites para navegar.</p>
+            </div>
+            <div class="card">
+                <h3>Soporte 24/7</h3>
+                <p>Estamos aquí cuando nos necesites.</p>
+            </div>
+            <div class="card">
+                <h3>Precios flexibles</h3>
+                <p>Planes accesibles para todos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <h3>PLAN BASICO</h3>
+                <p>100 Mbps for $19.99/month</p>
+            </div>
+            <div class="carousel-slide">
+                <h3>PLAN MEDIO</h3>
+                <p>500 Mbps for $49.99/month</p>
+            </div>
+            <div class="carousel-slide">
+                <h3>PLAN PREMIUM</h3>
+                <p>1 Gbps for $99.99/month</p>
+            </div>
+        </div>
+        <button id="prev">❮</button>
+        <button id="next">❯</button>
+    </section>
+
+    <section class="plans"></section>
+
+    <section class="testimonials">
+        <h2>Lo que dicen nuestros clientes</h2>
+        <div class="testimonial">
+            <p>"SpeedCom ha cambiado nuestra experiencia de Internet. ¡Son fantásticos!"</p>
+            <p>- Juan Pérez</p>
+        </div>
+        <div class="testimonial">
+            <p>"La atención al cliente es excepcional. Siempre listos para ayudar."</p>
+            <p>- Ana López</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 SpeedCom. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        let currentIndex = 0; 
+        const slides = document.querySelectorAll('.carousel-slide'); 
+        const totalSlides = slides.length; 
+
+        
+        function updateCarousel() {
+            const offset = -currentIndex * 100; 
+            document.querySelector('.carousel-container').style.transform = `translateX(${offset}%)`; 
+        }
+
+     
+        document.getElementById('next').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalSlides; 
+            updateCarousel(); 
+        });
+
+        // Manejo del botón "Anterior"
+        document.getElementById('prev').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; 
+            updateCarousel(); 
+        });
+
+        
+        updateCarousel();
+
+     
+        document.getElementById('show-mission').addEventListener('click', () => {
+            document.getElementById('info-display').innerText = 'Nuestra misión es ofrecer un servicio de Internet rápido y confiable.';
+        });
+
+        document.getElementById('show-vision').addEventListener('click', () => {
+            document.getElementById('info-display').innerText = 'Nuestra visión es ser el proveedor de Internet líder en la región.';
+        });
+
+        document.getElementById('show-values').addEventListener('click', () => {
+            document.getElementById('info-display').innerText = 'Nuestros valores son la calidad, el compromiso y la innovación.';
+        });
+    </script>
+</body>
+</html>
